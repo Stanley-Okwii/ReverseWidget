@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<widget id="YoMan.widget.YoMan" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
-    <name>YoMan</name>
+<widget id="Transplace.widget.Transplace" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Transplace</name>
     <description>The description of this widget.</description>
 
     <icon />

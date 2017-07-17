@@ -1,6 +1,6 @@
 {
-  "name": "YoMan",
-  "version": "1.0.0",
+  "name": "Transplace",
+  "version": "0.1.0",
   "description": "This is a mendix widget that takes in a string or set of strings, reverses the strings like a mirror",
   "license": "Apache 2",
   "author": "Stanley&Marvin",

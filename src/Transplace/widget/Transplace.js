@@ -2,7 +2,7 @@
 define([
     "dojo/_base/declare",
     "mxui/widget/_WidgetBase", //all widgets must inherit of. This inherits from dijit._WidgetBase, which serves as a foundation for all widgets
-    "dijit/_TemplatedMixin",//It takes an HTML template, and creates the widget’s DOM tree according to that template
+    "dijit/_TemplatedMixin",//I a HTML template, and creates the widget’s DOM tree according to that template
 
     "mxui/dom",
     "dojo/dom",
@@ -13,18 +13,17 @@ define([
     "dojo/html",
 
 
-    "dojo/text!YoMan/widget/template/YoMan.html"
+    "dojo/text!Transplace/widget/template/Transplace.html"
 ], function (declare, _WidgetBase, _TemplatedMixin, dom, dojoDom, dojoProp, dojoConstruct, lang, dojoText, dojoHtml, widgetTemplate) {
     "use strict";
 
 
     // Declare widget's prototype.
-    return declare("YoMan.widget.YoMan", [_WidgetBase, _TemplatedMixin], {
+    return declare("Transplace.widget.Transplace", [_WidgetBase, _TemplatedMixin], {
         // _TemplatedMixin will create our dom node using this HTML template.
         templateString: widgetTemplate,
 
         // DOM elements
-
         myName: null,
         myNamee: null,
         myWords: null,
@@ -128,8 +127,6 @@ define([
             logger.debug(this.id + "._resetSubscriptions");
             // Release handles on previous object, if any.
             this.unsubscribeAll();
-
-
         },
 
         _executeCallback: function (cb, from) {
@@ -141,5 +138,5 @@ define([
     });
 });
 
-require(["YoMan/widget/YoMan"]);
+require(["Transplace/widget/Transplace"]);
 
