@@ -1,0 +1,10 @@
+{
+  "generator-mendix": {
+    "promptValues": {
+      "copyright": "Flock of Birds",
+      "license": "Apache 2",
+      "author": "Stanley Okwii",
+      "boilerplate": "appstore"
+    }
+  }
+}

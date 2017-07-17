@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="YoMan.widget.YoMan" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>YoMan</name>
+    <description>The description of this widget.</description>
+
+    <icon />
+
+    <properties>
+        <property key="backgroundColor" type="attribute" required="false">
+            <caption>Background Color</caption>
+            <category>Appearance</category>
+            <description>The background color of the widget.</description>
+            <attributeTypes>
+                <attributeType name="String" />
+            </attributeTypes>
+        </property>
+     
+    </properties>
+</widget>
+
