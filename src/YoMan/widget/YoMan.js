@@ -5,7 +5,7 @@ define([
     "dijit/_TemplatedMixin",//It takes an HTML template, and creates the widget’s DOM tree according to that template
 
     "mxui/dom",
-    "dojo/dom",//Modules for manipulating and managing the DOM and HTML
+    "dojo/dom",
     "dojo/dom-prop",
     "dojo/dom-construct",
     "dojo/_base/lang",
@@ -139,8 +139,6 @@ define([
             }
         }
     });
-
-
 });
 
 require(["YoMan/widget/YoMan"]);
