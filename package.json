@@ -4,7 +4,6 @@
   "description": "This is a mendix widget that takes in a string or set of strings, reverses the strings like a mirror",
   "license": "Apache 2",
   "author": "Stanley&Marvin",
-  "private": true,
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.0.0",

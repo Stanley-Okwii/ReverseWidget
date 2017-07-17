@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <widget id="Transplace.widget.Transplace" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
     <name>Transplace</name>
-    <description>The description of this widget.</description>
+    <description>This widget captures input from the user as a string, and inverts the string</description>
 
     <icon />
 

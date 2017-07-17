@@ -3,9 +3,8 @@ test/*
 *.tmp
 *.lock
 .idea/
-*.jshintrc
 dist/
-
+assets/*
 node_modules/
 .editorconfig
 *DS_Store*
