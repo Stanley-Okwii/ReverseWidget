@@ -14,15 +14,25 @@
                 <attributeType name="String" />
             </attributeTypes>
         </property>
-             <property key="StudentData" type="attribute" required="true">
+             <property key="StudentData" type="attribute" entityProperty="nameProperty" required="true">
             <caption>Data to retrieve</caption>
             <category>Data values</category>
             <description>The context data for the object</description>
             <attributeTypes>
                 <attributeType name="String" />
             </attributeTypes>
+        </property>     
+             <property key="nameProperty" type="entity" required="false">
+            <caption>Name property</caption>
+            <category>Student values</category>
+            <description>This is the entity property</description>
         </property>
-     
+             <property key="MicroflowToRun" type="microflow" required="true" defaultValue="">
+            <caption>Microflow</caption>
+            <category>Behavior</category>
+            <description>The microflow to execute on click.</description>
+            <returnType type="Boolean" />
+        </property>
     </properties>
 </widget>
 
