@@ -40,9 +40,9 @@ define([
         CreateObject: function () {
             mx.data.create({
                 entity: this.nameproperty,
-                callback: lang.hitch(this, function (Sobject) {
-                    Sobject.set(this.StudentData, this.addText.value);
-                    this.SaveObject(Sobject);
+                callback: lang.hitch(this, function (object2) {
+                    object2.set(this.StudentData, this.addText.value);
+                    this.SaveObject(object2);
                     console.log("Object created on server");
                     }),
                 error: function (e) {
@@ -58,14 +58,6 @@ define([
                 },
                 error: function (e) {
                     console.error("Could not commit object:"+ e);
-                }
-            });
-        },
-        Saving: function () {
-            mx.data.save({
-                mxobj: obj,
-                callback: function () {
-                    console.log("Object saved");
                 }
             });
         },
