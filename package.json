@@ -17,6 +17,7 @@
     "grunt-contrib-csslint": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-newer": "^1.2.0",
+    "mendix-client": "git+https://github.com/FlockOfBirds/Mendix-client-typing.git",
     "node-base64-image": "^0.1.2",
     "node-mendix-modeler-path": "https://github.com/JelteMX/node-mendix-modeler-path/archive/v1.0.0.tar.gz",
     "semver": "^5.1.0",
