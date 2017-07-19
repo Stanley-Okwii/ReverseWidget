@@ -15,12 +15,13 @@ define([
         templateString: widgetTemplate,
 
         // DOM elements
-        myNamee: null,
         addText: null,
-
-        // Internal variables
         _contextObject: null,
         object2:null,
+        myNamee:null,
+
+        // Internal variables
+
         StudentData: "",
         nameProperty: "",
         MicroflowToRun: "",
