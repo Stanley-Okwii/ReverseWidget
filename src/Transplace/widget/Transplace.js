@@ -20,8 +20,9 @@ define([
 
         // Internal variables
         _contextObject: null,
+        object2:null,
         StudentData: "",
-        nameproperty: "",
+        nameProperty: "",
         MicroflowToRun: "",
 
 
@@ -39,33 +40,25 @@ define([
 
         CreateObject: function () {
             mx.data.create({
-                entity: this.nameproperty,
-                callback: lang.hitch(this, function (Sobject) {
-                    Sobject.set(this.StudentData, this.addText.value);
-                    this.SaveObject(Sobject);
+                entity: this.nameProperty,
+                callback: lang.hitch(this, function (object2) {
+                    object2.set(this.StudentData, this.addText.value);
+                    this.SaveObject(object2);
                     console.log("Object created on server");
                     }),
                 error: function (e) {
-                    console.log("an error occured: " + e);
+                    console.log("an error occured:" + e);
                 }
             });
         },
-        SaveObject: function (StudentObject) {
+        SaveObject: function (contextObject) {
             mx.data.commit({
-                mxobj: StudentObject,
+                mxobj: contextObject,
                 callback: function () {
                     console.log("Object committed");
                 },
                 error: function (e) {
                     console.error("Could not commit object:"+ e);
-                }
-            });
-        },
-        Saving: function () {
-            mx.data.save({
-                mxobj: obj,
-                callback: function () {
-                    console.log("Object saved");
                 }
             });
         },

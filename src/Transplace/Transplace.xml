@@ -14,7 +14,7 @@
                 <attributeType name="String" />
             </attributeTypes>
         </property>
-             <property key="StudentData" type="attribute" entityProperty="nameProperty" required="true">
+             <property key="StudentData" type="attribute" entityProperty="nameProperty" required="false">
             <caption>Data to retrieve</caption>
             <category>Data values</category>
             <description>The context data for the object</description>
@@ -22,9 +22,9 @@
                 <attributeType name="String" />
             </attributeTypes>
         </property>     
-             <property key="nameProperty" type="entity" required="false">
+             <property key="nameProperty" type="entity" required="true">
             <caption>Name property</caption>
-            <category>Student values</category>
+            <category>Data values</category>
             <description>This is the entity property</description>
         </property>
              <property key="MicroflowToRun" type="microflow" required="true" defaultValue="">
