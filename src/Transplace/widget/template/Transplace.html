@@ -1,17 +1,9 @@
 <div class="widgetname">
     <form>
 
-        <input type="text" placeholder="Enter your string" data-dojo-attach-point="myName"></input>
-        <input data-dojo-attach-event='onClick: GetName' type="button" value="Reverse Letters" class="ButtonDiv"></input>
+        <input type="text" data-dojo-attach-event ="onmouseleave: CallMicroFlow" data-dojo-attach-point="addText" placeholder="Add name here"/> &nbsp;
+         <input type="button" value="Add" data-dojo-attach-event ="onClick: CreateObject"/>
+        </br>
         </br><span data-dojo-attach-point="myNamee" >Your Letters will be reversed here</span>
-        </br></br>
-
-        <input type="text" placeholder="Enter your sentence" data-dojo-attach-point="myWord"></input>        
-        <input  data-dojo-attach-event='onClick: ReverseWords' type="button" value="Reverse Words" class="ButtonDiv"></input>
-        </br><span data-dojo-attach-point="myWordss">My words will be inverted here</span>
-        </br>
-        </br>
-        <div data-dojo-attach-event='onClick: increment'><input type="button" value="Add 1 to me" class="ButtonDiv"></input>
-         &nbsp; count: <span data-dojo-attach-point='counter'>${_i}</span></div>
     </form>
 </div>
