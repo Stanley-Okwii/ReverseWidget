@@ -3,11 +3,11 @@ import * as domConstruct from "dojo/dom-construct";
 import * as WidgetBase from "mxui/widget/_WidgetBase";
 import * as dojoClass from "dojo/dom-class";
 
-import "croppie/croppie.css";
-import Croppie = require("croppie");
-import { UrlHelper } from "./UrlHelper";
+import "Transplace/Transplace.css";
+//import Croppie = require("croppie");
 
-class ImageCrop extends WidgetBase {
+
+class Transplace extends WidgetBase {
 
     // Parameters configured in modeler
     widthOfViewPort: number;
@@ -165,4 +165,4 @@ dojoDeclare("org.flockofbirds.widget.cropimage.CropImage", [ WidgetBase ], funct
         }
     }
     return result;
-}(ImageCrop));
+}(Transplace));

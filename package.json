@@ -4,6 +4,9 @@
   "description": "This is a mendix widget that takes in a string or set of strings, reverses the strings like a mirror",
   "license": "Apache 2",
   "author": "Stanley&Marvin",
+    "dependencies": {
+    "transplace": "^2.4.1"
+  },
   "devDependencies": {
     "@types/big.js": "0.0.31",
     "@types/dojo": "^1.9.35",
