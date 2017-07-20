@@ -14,10 +14,10 @@ class Transplace extends WidgetBase {
 
     // Internal variables
     private contextObject: mendix.lib.MxObject;
-    private ReverseText:string;
+    private ReverseText: string;
 
     postCreate() {
-        
+
     }
 
     update(object: mendix.lib.MxObject, callback?: () => void) {
@@ -42,20 +42,18 @@ class Transplace extends WidgetBase {
             class: "form-control btn-default",
             type: "button",
             value: "click me"
-        }, this.domNode)
-        
+        }, this.domNode);
+
     }
 
     private updateRendering() {
         if (this.contextObject) {
             dojoStyle.set(this.domNode, "display", "block");
             this.ReverseText = this.contextObject.get(this.StudentData).toString();
-            domConstruct.create("div", {
-            innerHTML: "Reverse Text will be displayed here"
-        }, this.domNode)
+            this.domStructureCreation();
         } else {
             // dojoClass.add(this.domNode, "hidden");
-             dojoStyle.set(this.domNode, "display", "none");
+            dojoStyle.set(this.domNode, "display", "none");
         }
     }
 
@@ -68,10 +66,39 @@ class Transplace extends WidgetBase {
             });
         }
     }
+
+    private domStructureCreation() {
+        domConstruct.create("input", {
+            type: "text",
+            placeholder: "Enter your Text here"
+        }, this.domNode).addEventListener("click", () => {
+            if (this.MicroflowToRun !== "") {
+               // this.ExecuteMicroflow(this.MicroflowToRun, Number(this.contextObject.getGuid()));
+            }
+        }, false);
+
+        domConstruct.create("div", {
+            innerHTML: "Reverse Text will be displayed here"
+        }, this.domNode);
+    }
+
+    private ReverseName(TextToReverse: string) {
+        return TextToReverse.split("").reverse().join("");
+    }
+
+    // private ExecuteMicroflow(mf: string, guid: number, callback?: () => void) {
+    //     if (mf && guid) {
+    //         mx.ui.action(mf, {
+
+    //             progressMsg: string,
+    //         }, this);
+    //     }
+    // }
 }
 
+
 // tslint:disable : only-arrow-functions
-dojoDeclare("Transplace.widget.Transplace", [ WidgetBase ], function(Source: any) {
+dojoDeclare("Transplace.widget.Transplace", [WidgetBase], function (Source: any) {
     const result: any = {};
     for (const i in Source.prototype) {
         if (i !== "constructor" && Source.prototype.hasOwnProperty(i)) {
