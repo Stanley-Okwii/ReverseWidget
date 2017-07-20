@@ -1,7 +1,6 @@
 import * as dojoDeclare from "dojo/_base/declare";
 import * as domConstruct from "dojo/dom-construct";
 import * as WidgetBase from "mxui/widget/_WidgetBase";
-import * as dojoStyle from "dojo/dom-style";
 
 import "Transplace/Transplace.css";
 
@@ -14,7 +13,6 @@ class Transplace extends WidgetBase {
 
     // Internal variables
     private contextObject: mendix.lib.MxObject;
-    private ReverseText:string;
 
     postCreate() {
         
@@ -48,14 +46,16 @@ class Transplace extends WidgetBase {
 
     private updateRendering() {
         if (this.contextObject) {
-            dojoStyle.set(this.domNode, "display", "block");
-            this.ReverseText = this.contextObject.get(this.StudentData).toString();
-            domConstruct.create("div", {
-            value: "Reverse Text will be displayed here"
-        }, this.domNode)
+            dojoClass.remove(this.domNode, "hidden");
+            if (!this.configChecked) {
+                this.checkConfig();
+            }
+            this.croppie.bind({
+                url: UrlHelper.getDynamicResourceUrl(this.contextObject.getGuid(),
+                    this.contextObject.get("changedDate") as number)
+            });
         } else {
-            // dojoClass.add(this.domNode, "hidden");
-             dojoStyle.set(this.domNode, "display", "none");
+            dojoClass.add(this.domNode, "hidden");
         }
     }
 
@@ -71,7 +71,7 @@ class Transplace extends WidgetBase {
 }
 
 // tslint:disable : only-arrow-functions
-dojoDeclare("transplace.Tranplace", [ WidgetBase ], function(Source: any) {
+dojoDeclare("org.flockofbirds.widget.cropimage.CropImage", [ WidgetBase ], function(Source: any) {
     const result: any = {};
     for (const i in Source.prototype) {
         if (i !== "constructor" && Source.prototype.hasOwnProperty(i)) {

@@ -54,8 +54,7 @@ class Transplace extends WidgetBase {
             value: "Reverse Text will be displayed here"
         }, this.domNode)
         } else {
-            // dojoClass.add(this.domNode, "hidden");
-             dojoStyle.set(this.domNode, "display", "none");
+            dojoClass.add(this.domNode, "hidden");
         }
     }
 
@@ -71,7 +70,7 @@ class Transplace extends WidgetBase {
 }
 
 // tslint:disable : only-arrow-functions
-dojoDeclare("transplace.Tranplace", [ WidgetBase ], function(Source: any) {
+dojoDeclare("org.flockofbirds.widget.cropimage.CropImage", [ WidgetBase ], function(Source: any) {
     const result: any = {};
     for (const i in Source.prototype) {
         if (i !== "constructor" && Source.prototype.hasOwnProperty(i)) {
