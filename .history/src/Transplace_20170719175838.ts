@@ -51,7 +51,7 @@ class Transplace extends WidgetBase {
             dojoStyle.set(this.domNode, "display", "block");
             this.ReverseText = this.contextObject.get(this.StudentData).toString();
             domConstruct.create("div", {
-            innerHTML: "Reverse Text will be displayed here"
+            value: "Reverse Text will be displayed here"
         }, this.domNode)
         } else {
             // dojoClass.add(this.domNode, "hidden");

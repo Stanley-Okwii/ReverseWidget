@@ -6,7 +6,7 @@ module.exports = {
     entry: "./src/Transplace.ts",
     output: {
         path: __dirname + "/dist/tmp",
-        filename: "./src/Transplace.js",
+        filename: "Transplace/widget/Transplace.js",
         libraryTarget: "umd"
     },
     resolve: {

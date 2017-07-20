@@ -5,7 +5,7 @@
             <widgetFile path="Transplace.xml" />
         </widgetFiles>
         <files>
-            <file path="Transplace/widget/Transplace/" />
+            <file path="Transplace/widget/" />
         </files>
     </clientModule>
 </package>
