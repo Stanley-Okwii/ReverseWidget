@@ -92,20 +92,20 @@ class Transplace extends WidgetBase {
     }
 
     private createObject(){
-        // mx.data.create({
-        //         entity: this.nameProperty,
-        //         callback: (this, function  (object2) {
-        //             object2.set(StudentData, this.addText.value);
-        //             SaveObject(object2);
-        //             console.log("Object created on server");
-        //             }).bind(this),
-        //         error: function (e) {
-        //             console.log("an error occured:" + e);
-        //         }
-        //     });
+        mx.data.create({
+                entity: this.nameProperty,
+                callback: (this, function (object2) {
+                    object2.set(this.StudentData, this.addText.value);
+                    SaveObject(object2);
+                    console.log("Object created on server");
+                    }).bind(this),
+                error: function (e) {
+                    console.log("an error occured:" + e);
+                }
+            });
     }
 
-    private SaveObject(contextObject: any) {
+    SaveObject(contextObject: any) {
             mx.data.commit({
                 mxobj: contextObject,
                 callback: function () {
