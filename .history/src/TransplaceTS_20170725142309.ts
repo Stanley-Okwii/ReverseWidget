@@ -6,10 +6,6 @@ import * as dojoStyle from "dojo/dom-style";
 import * as dojoHtml from "dojo/html";
 import * as dom from "dojo/dom";
 
-interface FunctionClass {
-                (inputString: string): string;
-            }
-
 class TransplaceTS extends WidgetBase {
 
     // Parameters configured in modeler
@@ -71,9 +67,12 @@ class TransplaceTS extends WidgetBase {
             domConstruct.empty(this.domNode);
             this.ReverseText = this.contextObject.get(this.StudentData) as string;
 
-            
+            interface FunctionClass {
+                (inputString: string): string;
+            }
             var reverseText: FunctionClass = function(textToReverse: string):string{ return textToReverse.split("").reverse().join("")}
             this.ReverseText2 = reverseText(this.contextObject.get(this.StudentData) as string);
+
 
             dojoHtml.set(this.domNode, this.ReverseName(this.ReverseText));
             this.DisplayText();
