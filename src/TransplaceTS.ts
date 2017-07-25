@@ -6,6 +6,8 @@ import * as dojoStyle from "dojo/dom-style";
 import * as dojoHtml from "dojo/html";
 import * as dom from "dojo/dom";
 
+import "./TransplaceTS.css";
+
 class TransplaceTS extends WidgetBase {
 
     // Parameters configured in modeler
